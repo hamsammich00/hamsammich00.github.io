@@ -1,5 +1,5 @@
 ---
-title: Welcome to my site
+title: "Welcome to my site"
 date: 2025-05-06 
 categories: [homelab,welcome]
 tags: [welcome,homelab]

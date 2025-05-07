@@ -1,5 +1,5 @@
 ---
-title: Please, Update your Stuff
+title: Please, update your stuff
 date: 2025-05-07 12:00:00 
 categories: [windows,powershell]
 tags: [windows,updates,powershell]

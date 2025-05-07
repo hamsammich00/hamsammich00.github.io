@@ -28,7 +28,7 @@ For automation or those feeling like not watching over the machine to make it re
 #Check if the module is installed, then continue with the updates
 $ModuleName = "PSWindowsUpdate"
 if (-not (Get-Module -ListAvailable -Name $ModuleName)) {
-    Install-Module $ModuleName -Scope CurrentUser -Force
+    Install-Module $ModuleName -Scope AllUsers -Force
 }
 
 #The actual updates

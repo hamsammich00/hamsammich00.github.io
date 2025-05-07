@@ -7,7 +7,7 @@ tags: [windows,updates,powershell]
 
 # Windows Updates
 Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if thats the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
-```Powershell
+```powershell
 Install-Module PSWindowsUpdate
 #I'm trying to get used to using Visual Studio Code with PowerShell extension since 
 #PowerShell ISE is deprecated but it just doesn't have the same to feel it. 
@@ -20,11 +20,11 @@ Get-WindowsUpdate -install
 #it accepts all the updates automagically. 
 ```
 If this is not all the updates you're looking for, feel free to add the -MicrosoftUpdate flag.
-```Powershell
+```powershell
 Get-WindowsUpdate -MicrosoftUpdate -install
 ```
 For automation or those feeling like not watching over the machine to make it reboot, throw on the -AutoReboot flag and it does exactly that, reboots the machine if it is needed. Depending on what solution you use to actually administer updates or push scripts remotely, feel free to create your own. this below is somethe basis for something that most folks could automate out in a way of their choosing.
-```Powershell
+```powershell
 #Check if the module is installed, then continue with the updates
 $ModuleName = "PSWindowsUpdate"
 if (-not (Get-Module -ListAvailable -Name $ModuleName)) {

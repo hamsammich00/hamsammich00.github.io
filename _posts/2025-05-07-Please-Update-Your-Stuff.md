@@ -9,12 +9,15 @@ tags: [windows,updates,powershell]
 Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if thats the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
 ```Powershell
 Install-Module PSWindowsUpdate
-#I'm trying to get used to using Visual Studio Code with PowerShell extension since PowerShell ISE is deprecated but it just doesn't have the same to feel it. Try to avoid deprecated software, no matter how great and simple and amazing it is.
+#I'm trying to get used to using Visual Studio Code with PowerShell extension since 
+#PowerShell ISE is deprecated but it just doesn't have the same to feel it. 
+#Try to avoid deprecated software, no matter how great and simple and amazing it is.
 ```
 Thats just gonna get you the module. This next bit is the fun part. Run the following to get updates:
-```Powershell
+```powershell
 Get-WindowsUpdate -install
-#if you add the -AcceptAll flag it does exactly what it says, it accepts all the updates automagically. 
+#if you add the -AcceptAll flag it does exactly what it says, 
+#it accepts all the updates automagically. 
 ```
 If this is not all the updates you're looking for, feel free to add the -MicrosoftUpdate flag.
 ```Powershell

@@ -23,7 +23,7 @@ If this is not all the updates you're looking for, feel free to add the -Microso
 ```powershell
 Get-WindowsUpdate -MicrosoftUpdate -install
 ```
-For automation or those feeling like not watching over the machine to make it reboot, throw on the -AutoReboot flag and it does exactly that, reboots the machine if it is needed. Depending on what solution you use to actually administer updates or push scripts remotely, feel free to create your own. this below is somethe basis for something that most folks could automate out in a way of their choosing.
+For automation or those feeling like not watching over the machine to make it reboot, throw on the -AutoReboot flag and it does exactly that, reboots the machine if it is needed. Depending on what solution you use to actually administer updates or push scripts remotely, you may not need this. Below is the basis for something that most folks could automate out in a way of their choosing.
 ```powershell
 #Check if the module is installed, then continue with the updates
 $ModuleName = "PSWindowsUpdate"

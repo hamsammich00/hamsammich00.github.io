@@ -18,8 +18,8 @@ GPU: AMD RX 470 8gb
 Storage: 256gb Kingston SSD   
   
 So the specs of the host arent very impressive but they are workable for the time being. the GPU is just in case if i need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
-![testing the ability to add images with a cat photo](https://github.com/hamsammich00/hamsammich00.github.io/blob/main/assets/cattestimage.png)
-![testing the ability to add images with a cat photo](/main/assets/cattestimage.png)
+![testing the ability to add images with a cat photo](https://github.com/hamsammich00/hamsammich00.github.io/blob/main/assets/img/8cef453a-0865-4626-8ae7-a66aa5507f71.jpg)
+
 # Networking
 Freshly installed in tandem with my ISP's modem is my new Gl.iNet Flint 2 router. It is a great OpenWRT based router with an awesomely simple UI to set up my static IPs, the built in AddGuard Home, and port forward for any projects that require it.  
 

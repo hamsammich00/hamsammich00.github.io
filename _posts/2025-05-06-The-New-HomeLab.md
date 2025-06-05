@@ -1,34 +1,23 @@
 ---
 title: The New Homelab!
 date: 2025-05-07 12:00:00 
-categories: [windows,powershell]
-tags: [windows,updates,powershell]
+categories: [homelab,proxmox]
+tags: [homelab,proxmox]
 ---
 
-# Windows Updates
-Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if thats the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
-```powershell
-Install-Module PSWindowsUpdate
-```
-Thats just gonna get you the module. This next bit is the fun part. Run the following to get Windows updates:
-```powershell
-Get-WindowsUpdate -install
-#if you add the -AcceptAll flag it does exactly what it says, 
-#it accepts all the updates automagically. 
-```
-If this is not all the updates you're looking for, feel free to add the -MicrosoftUpdate flag.
-```powershell
-Get-WindowsUpdate -MicrosoftUpdate -install
-```
-For automation or those feeling like not watching over the machine to make it reboot, throw on the -AutoReboot flag and it does exactly that, reboots the machine if it is needed. Depending on what solution you use to actually administer updates or push scripts remotely, you may not need this. Below is the basis for something that most folks could automate out in a way of their choosing but does not force a reboot once completed if a reboot is required for an update.
-```powershell
-#Check if the module is installed, then continue with the updates
-$ModuleName = "PSWindowsUpdate"
-if (-not (Get-Module -ListAvailable -Name $ModuleName)) {
-    Install-Module $ModuleName -Scope AllUsers -Force
-}
+# The "New" Host
+So, I found a few parts of my old PC a have reated my own Proxmox host! I am something of an AMD fan when it comes to hardware as their consumer space and now even their server grade hardware are getting really good performance. My "first" pc was a Bulldozer Architere FX8120 that i overclocked to 4GHz all core. This was pretty much my step up from that as I perform my pc upgrade like the ship of Theseus. If I change out 1 component of my PC at a time, when does it cease to be the same PC that i started with?
 
-#The actual updates
-Get-WindowsUpdate -MicrosoftUpdate -Install -AcceptAll
-```
-So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. 
+# Specs
+So the specs of the host arent very impressive but they are workable for the time being. Will edit with photos later.
+
+CPU: Ryzen 1600 (6 core 12 thread)
+Motherboard: Asrock X370 
+RAM: 16GB of G Skill 3200 
+GPU: RX 470 8gb (the RX 400 and 500 series were similar, the 70, 80, and 90 8gb were basically the same but with clocks and voltages cut back)
+Storage: 256gb Kingston SSD 
+
+This is a workable host for the time being. 
+
+# Networking
+Freshly installed in tandem with my ISP's modem is my new Gl.iNet Flint 2 router. It is a 

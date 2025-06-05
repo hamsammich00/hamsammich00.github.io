@@ -6,7 +6,7 @@ tags: [homelab,proxmox]
 ---
 
 # The "New" Host
-So, I found a few parts of my old PC a have reated my own Proxmox host! I am something of an AMD fan when it comes to hardware as their consumer space and now even their server grade hardware are getting really good performance. My "first" pc was a Bulldozer Architere FX8120 that i overclocked to 4GHz all core. This was pretty much my step up from that as I perform my pc upgrade like the ship of Theseus. If I change out 1 component of my PC at a time, when does it cease to be the same PC that i started with?
+So, I found a few parts of my old PC have created my own Proxmox host! I am something of an AMD fan when it comes to hardware as their consumer space and now even their server grade hardware are getting really good performance. My "first" pc was a Bulldozer Architere FX8120 that i overclocked to 4GHz all core. This was pretty much my step up from that as I perform my pc upgrade like the ship of Theseus. If I change out 1 component of my PC at a time, when does it cease to be the same PC that i started with?
 
 # Specs
 So the specs of the host arent very impressive but they are workable for the time being. Will edit with photos later.

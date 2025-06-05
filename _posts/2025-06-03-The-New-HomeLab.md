@@ -6,18 +6,21 @@ tags: [homelab,proxmox]
 ---
 
 # The "New" Host
-So, I found a few parts of my old PC have created my own Proxmox host! I am something of an AMD fan when it comes to hardware as their consumer space and now even their server grade hardware are getting really good performance. 
+So, I finally got around to turning my old PC parts into have my own Proxmox host! I am something of an AMD fan which will become apparent in time.  
 
 # Specs
 I perform my pc upgrades like the ship of Theseus. If I change out 1 component of my PC at a time, when does it cease to be the same PC that I started with? Either way, after a period of time and many upgrades I eventually have another computer worth of parts lying around. This is an amalgamation of that.  
   
-CPU: Ryzen 1600 (6 core 12 thread)  
+CPU: AMD Ryzen 1600 (6 core 12 thread)  
 Motherboard: Asrock X370  
 RAM: 16GB of G Skill 3200   
-GPU: RX 470 8gb  
+GPU: AMD RX 470 8gb  
 Storage: 256gb Kingston SSD   
   
 So the specs of the host arent very impressive but they are workable for the time being. the GPU is just in case if i need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
 
 # Networking
 Freshly installed in tandem with my ISP's modem is my new Gl.iNet Flint 2 router. It is a great OpenWRT based router with, so far, an awesome and simple UI to set up my static IPs, the built in AddGuard Home, and port forward for any projects that require it.  
+
+# The Future 
+Well I am unsure where I want to go from here. If budget was no option, I would pick up a server tower and build a big AMD Epyc CPU setup but i don't have a need for that much horsepower. Yet. I do need more storage for certain though. That will be picked up in time. More RAM is certainly something that needed. I am not really in need of a PiHole as my router has built in installation of Addguard Home. I may make a writeup of Addguard or my router at a later date becasue i am very pleased with it thus far. I do plan on making a Minecraft server as a proof of concept for myself to become accustomed to more networking, especially with the process of making  reverse proxy for it. 

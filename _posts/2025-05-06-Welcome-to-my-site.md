@@ -1,8 +1,8 @@
 ---
 title: Welcome to my site
 date: 2025-05-06 12:00:00 
-categories: [welcome,homelab]
-tags: [welcome,homelab]
+categories: [welcome]
+tags: [welcome]
 ---
 
 # Welcome

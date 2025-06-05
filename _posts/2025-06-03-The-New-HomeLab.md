@@ -18,10 +18,10 @@ GPU: AMD RX 470 8gb
 Storage: 256gb Kingston SSD   
   
 So the specs of the host arent very impressive but they are workable for the time being. the GPU is just in case if i need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
-(assets/cattestimage.png)
+![testing the ability to add images with a cat photo](https://github.com/hamsammich00/hamsammich00.github.io/blob/main/assets/cattestimage.png)
 
 # Networking
-Freshly installed in tandem with my ISP's modem is my new Gl.iNet Flint 2 router. It is a great OpenWRT based router with, so far, an awesome and simple UI to set up my static IPs, the built in AddGuard Home, and port forward for any projects that require it.  
+Freshly installed in tandem with my ISP's modem is my new Gl.iNet Flint 2 router. It is a great OpenWRT based router with an awesomely simple UI to set up my static IPs, the built in AddGuard Home, and port forward for any projects that require it.  
 
 # The Future 
-Well I am unsure where I want to go from here. If budget was no option, I would pick up a server tower and build a big AMD Epyc CPU setup but i don't have a need for that much horsepower. Yet. I do need more storage for certain though. That will be picked up in time. More RAM is certainly something that needed. I am not really in need of a PiHole as my router has built in installation of Addguard Home. I may make a writeup of Addguard or my router at a later date becasue i am very pleased with it thus far. I do plan on making a Minecraft server as a proof of concept for myself to become accustomed to more networking, especially with the process of making  reverse proxy for it. 
+Well, I am unsure where I want to go from here. If budget was no option, I would pick up a server tower and build a big AMD Epyc CPU setup but I don't have a need for that much horsepower. Yet. I do need more storage for certain. That will be picked up in time. More RAM is certainly something that would help. Honestly, Having some trouble figuring out what exactly I want to do with this, what i wish to create. I do plan on making a Minecraft server as a proof of concept for myself to become accustomed to more networking, especially with the process of making  reverse proxy for it. 

@@ -1,5 +1,5 @@
 ---
-title: Please, update your stuff
+title: The New Homelab!
 date: 2025-05-07 12:00:00 
 categories: [windows,powershell]
 tags: [windows,updates,powershell]

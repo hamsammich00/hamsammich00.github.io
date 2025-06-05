@@ -17,7 +17,7 @@ RAM: 16GB of G Skill 3200
 GPU: AMD RX 470 8gb  
 Storage: 256gb Kingston SSD   
   
-So the specs of the host arent very impressive but they are workable for the time being. the GPU is just in case if i need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
+So the specs of the host arent very impressive but they are workable for the time being. The GPU is just in case if I need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
 ![testing the ability to add images with a cat photo](assets/img/cat.jpg)
 
 # Networking

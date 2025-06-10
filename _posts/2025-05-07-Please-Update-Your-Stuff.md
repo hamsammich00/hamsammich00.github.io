@@ -6,7 +6,7 @@ tags: [windows,updates,powershell]
 ---
 
 # Windows Updates
-Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if thats the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
+Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if that's the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
 ```powershell
 Install-Module PSWindowsUpdate
 ```

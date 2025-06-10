@@ -16,7 +16,7 @@ timezone:
 
 title: n00bOps # the main title
 
-tagline: Trying to learn it all, one bit at a time. # it will display as the subtitle
+tagline: Trying to learn it all, one byte at a time. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Attempts at making powershell and sysamin things easier.

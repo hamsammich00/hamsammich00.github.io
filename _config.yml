@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://the-public-domain-review.imgix.net/collections/harry-clarke-s-illustrations-for-poe-s-tales-of-mystery-and-imagination-1919/29966395810_0f91a20929_o.jpg?fit=clip&w=527&h=800&auto=format,compress
+avatar: ![a cat](assets/img/cat.jpg)
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.

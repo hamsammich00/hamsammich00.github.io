@@ -13,10 +13,10 @@ I perform my pc upgrades like the ship of Theseus. If I change out 1 component o
   
 CPU: AMD Ryzen 1600 (6 core 12 thread)  
 Motherboard: Asrock X370  
-RAM: 16GB of G Skill 3200   
+RAM: 16GB of G Skill running at 2400   
 GPU: AMD RX 470 8gb  
 Storage: 256gb Kingston SSD   
-  
+![The host](assets/img/homelab.jpg) 
 So the specs of the host arent very impressive but they are workable for the time being. The GPU is just in case if I need GPU passthrough for a project but is a weak link in this chain for sure. Will edit with a photo later. 
 
 # Networking

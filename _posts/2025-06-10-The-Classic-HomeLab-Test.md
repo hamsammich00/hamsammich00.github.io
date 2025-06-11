@@ -40,3 +40,20 @@ I connected to my router via my browser. In it, I needed to find a setting calle
 After this I opened the game and input my public IP and it came up!  
 ![Minecraft works!](assets/img/MinecraftProject/minecraftup.png)   
 Now time for the yearly 2 week Minecraft binge with friends!
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

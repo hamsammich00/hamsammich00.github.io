@@ -24,4 +24,20 @@ The networking setup is as dead simple as it gets. I will be doing my administra
 ![Very basic map of the lab](assets/img/homelab_network_map.png)
   
 # The Future 
-I will be creating a writeup of a classic homelab venture, building a minecraft server. This will, however be done on a Linux VM with Docker. I also plan on securing my lab with Tenable Nessus Essentials which will be a writeup all on its own. Further on, I am unsure but will post my testng of various things to try to learn things. 
+I will be creating a writeup of a classic homelab venture, building a minecraft server. This will, however be done on a Linux VM with Docker. I also plan on securing my lab with Tenable Nessus Essentials which will be a writeup all on its own. Further on, I am unsure but will post my testng of various things to try to learn things.   
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

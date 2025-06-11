@@ -35,7 +35,7 @@ services:
 Once this was saved, I brought up my Docker image using the CLI. Now, if you know much about Minecraft servers, you know you make them to play with friends. As of current, my docker cannot be reached from external so that means we have to adjust my networking settings on my router/firewall. 
 
 # Bringing it all together
-I connected to my router via my browser. In it, I needed to find a setting called "port forwarding". In a nutshell, this allows people with your public IP to connect to a specific port and be routed through to a specific private IP on your network. Once this was set up, I also foud where I could reserve IPs based on MAC address. I set this new server, MINE01PRD, to have its IP reserved so if I turn it off to spin something else up, I don't have to go in and adjust port forwarding rules.  
+I connected to my router via my browser. In it, I needed to find a setting called "port forwarding". In a nutshell, this allows people with your public IP to connect to a specific port and be routed through to a specific private IP on your network. Once this was set up, I also found where I could reserve IPs based on MAC address. I set this new server, MINE01PRD, to have its IP reserved so if I turn it off to spin something else up long enough that it loses its current IP, I don't have to go in and adjust port forwarding rules.  
 ![Port forwarding rule](assets/img/MinecraftProject/PortForewarding.png)  
 After this I opened the game and input my public IP and it came up!  
 ![Minecraft works!](assets/img/MinecraftProject/minecraftup.png)   

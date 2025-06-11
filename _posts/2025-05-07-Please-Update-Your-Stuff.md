@@ -32,3 +32,19 @@ if (-not (Get-Module -ListAvailable -Name $ModuleName)) {
 Get-WindowsUpdate -MicrosoftUpdate -Install -AcceptAll
 ```
 So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. 
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

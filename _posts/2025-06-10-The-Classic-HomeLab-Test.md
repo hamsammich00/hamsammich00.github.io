@@ -12,7 +12,7 @@ I installed it the correct way, headless, and proceeded with fleshing out my fre
 
 # Arriving at the Dock(er)
 I will admit, it took me a few minutes to wonder why sudo was not working. I did not realize sudo is not part of Debian natively. After getting that fixed, I installed OpenJDK and began installing Docker.  
-Installing docker was quite a fight versus my previous experience loading it on Rocky, Ubuntu, and Windows. I had to uninstall and reinstall it because Debian, unlike Ubuntu or Rocky, can't just intall it from apt installing docker-compose. In this writeup, I used the [itzg Docker image from Github.] (https://github.com/itzg/docker-minecraft-server) In it is a read-me file in which has some premade configurations for the yml file. I will take these and modify them slightly using variables again available from the itzg Docker image. Below is my docker-compose.yml file.  
+Installing docker was quite a fight versus my previous experience loading it on Rocky, Ubuntu, and Windows. I had to uninstall and reinstall it because Debian, unlike Ubuntu or Rocky, can't just intall it from apt installing docker-compose. In this writeup, I used the [itzg Docker image from Github.](https://github.com/itzg/docker-minecraft-server) In it is a read-me file in which has some premade configurations for the yml file. I will take these and modify them slightly using variables again available from the itzg Docker image. Below is my docker-compose.yml file.  
 ```markdown
 services:
   mc:
@@ -36,7 +36,7 @@ Once this was saved, I brought up my Docker image using the CLI. Now, if you kno
 
 # Bringing it all together
 I connected to my router via my browser. In it, I needed to find a setting called "port forwarding". In a nutshell, this allows people with your public IP to connect to a specific port and be routed through to a specific private IP on your network. Once this was set up, I also foud where I could reserve IPs based on MAC address. I set this new server, MINE01PRD, to have its IP reserved so if I turn it off to spin something else up, I don't have to go in and adjust port forwarding rules.  
-![Port forwarding rule](assets/img/MinecraftProject/PortForewarding.png) 
-After this I opened the game and input my public IP and it came up!
-![Minecraft works!](assets/img/MinecraftProject/minecraftup.png) 
+![Port forwarding rule](assets/img/MinecraftProject/PortForewarding.png)  
+After this I opened the game and input my public IP and it came up!  
+![Minecraft works!](assets/img/MinecraftProject/minecraftup.png)   
 Now time for the yearly 2 week Minecraft binge with friends!

@@ -26,7 +26,7 @@ services:
       MEMORY: 3G
       MOTD: "Linux and Self Hosting FTW!"
       WHITELIST: ""
-      SEED: THISWASALLDONEINLINUX
+      SEED: "THISWASALLDONEINLINUX"
       SERVER_NAME: "Noobops Minecraft"
     volumes:
       # attach the relative directory 'data' to the container's /data path

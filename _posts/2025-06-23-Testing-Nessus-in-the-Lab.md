@@ -1,8 +1,8 @@
 ---
 title: Testing Nessus in the Lab
 date: 2025-06-23 20:00:00 
-categories: [Nessus, homelab]
-tags: [nessus, proxmox]
+categories: [Nessus,homelab]
+tags: [nessus,proxmox]
 ---
 
 # Nessus in a Nutshell 

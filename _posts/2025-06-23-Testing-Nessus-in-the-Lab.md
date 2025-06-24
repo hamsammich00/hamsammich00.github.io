@@ -21,4 +21,20 @@ The Minecraft server that was built for my previous post required port forwardin
 ![Minecraft Vuln](assets/img/nessusproject/Screenshot2025-06-23214659.png)  
 The most surprising part of all, was that Nessus proceeded in one of it's vulnerabilities it detected, to screenshot the screen of the device it was able to access! While the screenshot was not of anything, the fact Nessus attempted to do so as a way of proving the attack was impressive.  
 ![It tried to take a screenshot!](assets/img/nessusproject/Screenshot2025-06-23204502.png)  
-The part of this that was a bit surprising in a negative manner, is my Windows machine I scanned is on the insider preview channel. I made it a point to delay my updates for this specific test. I assume this is why Nessus was unable to detect any Windows/Microsoft CVEs on the machine. Nonetheless, for a pure scanning software Nessus is very competent. I plan on testing others in order to determine what I want as a permanent fixture in my home lab environment. 
+The part of this that was a bit surprising in a negative manner is that Nessus was unable to detect any Windows/Microsoft CVEs on the machine. I assume that this is likely due to it being in the Insider Preview update channel. Nonetheless, for a pure scanning software Nessus is very competent. I plan on testing others including in order to determine what I want as a permanent fixture in my home lab environment. 
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

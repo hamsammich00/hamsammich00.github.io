@@ -4,7 +4,7 @@ date: 2025-05-06 12:00:00
 categories: [welcome]
 tags: [welcome]
 ---
-{% include hero.html %}
+
 
 # Welcome
 

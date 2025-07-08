@@ -1,0 +1,81 @@
+<section class="hero-banner-terminal">
+  <pre id="ascii-art" aria-label="Animated ASCII Art" role="img"></pre>
+  <div class="hero-text">
+    <h1>Welcome to n00bOps</h1>
+    <p>Where Homelab magic happens.</p>
+  </div>
+</section>
+
+<style>
+.hero-banner-terminal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #00ff00aa;
+  margin-bottom: 3rem;
+}
+
+#ascii-art {
+  flex: 1 1 320px;
+  font-size: 12px;
+  line-height: 10px;
+  white-space: pre;
+  margin-right: 2rem;
+  user-select: none;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #00ff00;
+  text-shadow: 0 0 6px #00ff00;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  opacity: 0.7;
+}
+</style>
+
+<script>
+const frames = [
+`  _      ____  ____  ____  ____  ____  ____ 
+/ \  /|/  _ \/  _ \/  _ \/  _ \/  __\/ ___\
+| |\ ||| / \|| / \|| | //| / \||  \/||    \
+| | \||| \_/|| \_/|| |_\\| \_/||  __/\___ |
+\_/  \|\____/\____/\____/\____/\_/   \____/
+                                            
+`,
+`   _     ____  _      _____ _     ____  ____ 
+/ \ /|/  _ \/ \__/|/  __// \   /  _ \/  _ \
+| |_||| / \|| |\/|||  \  | |   | / \|| | //
+| | ||| \_/|| |  |||  /_ | |_/\| |-||| |_\\
+\_/ \|\____/\_/  \|\____\\____/\_/ \|\____/
+                                            
+`
+];
+
+let currentFrame = 0;
+const asciiEl = document.getElementById('ascii-art');
+
+function showFrame() {
+  asciiEl.textContent = frames[currentFrame];
+  currentFrame = (currentFrame + 1) % frames.length;
+}
+
+// Show first frame immediately
+showFrame();
+
+// Cycle every 1500 ms (1.5 seconds)
+setInterval(showFrame, 1500);
+</script>

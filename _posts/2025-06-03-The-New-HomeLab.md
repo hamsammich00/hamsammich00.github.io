@@ -3,6 +3,8 @@ title: The New Homelab!
 date: 2025-06-05 12:00:00 
 categories: [homelab,proxmox]
 tags: [homelab,proxmox]
+image:
+  path: assets/img/homelab/homelab1220x608.png
 ---
 
 # The "New" Host

@@ -2,7 +2,7 @@
 title: "The Classic Homelab First Test: A Minecraft Server"
 date: 2025-06-10 18:00:00 
 categories: [homelab,proxmox,debian,networking]
-tags: [homelab,proxmox,networking,Minecraft Server Project]
+tags: [networking,Debian,Linux]
 ---
 
 # Starting Up

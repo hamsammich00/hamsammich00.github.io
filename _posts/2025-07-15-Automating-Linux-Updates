@@ -1,0 +1,12 @@
+---
+title: Automating Linux Updates
+date: 2025-07-15 20:00:00 
+categories: [Debian,Rocky,Linux]
+tags: [Debian,Rocky,Linux]
+---
+
+# Witty Title
+It has been a while sine I have had a lot of time to do much with my VMs and that includes updating them. Automation is in order. Only downside I can foresee is that I use two flavors of Linux, Debian and Rocky. Let's see if it can be fixed with one script. 
+
+# What Do
+

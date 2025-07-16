@@ -2,7 +2,7 @@
 title: Please, update your stuff
 date: 2025-05-07 12:00:00 
 categories: [windows,powershell]
-tags: [windows,updates,powershell]
+tags: [windows,powershell]
 ---
 
 # Windows Updates
@@ -31,7 +31,7 @@ if (-not (Get-Module -ListAvailable -Name $ModuleName)) {
 #The actual updates
 Get-WindowsUpdate -MicrosoftUpdate -Install -AcceptAll
 ```
-So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. 
+So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. More scripts can be found at https://github.com/hamsammich00/Demo-Scripts. 
 
 <script src="https://giscus.app/client.js"
         data-repo="hamsammich00/hamsammich00.github.io"

@@ -16,10 +16,9 @@ timezone:
 
 title: n00bOps # the main title
 
-tagline: 
-  - Trying to learn it all, one byte at a time. # it will display as the subtitle
-  - Find my scripts repo at https://github.com/hamsammich00/Demo-Scripts
-  
+tagline: Trying to learn it all, one byte at a time. My scripts repo may be found at https://hamsammich00.github.io/ # it will display as the subtitle
+
+
 description: >- # used by seo meta and the atom feed
   Attempts at making powershell and sysamin things easier.
 

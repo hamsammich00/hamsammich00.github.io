@@ -1,3 +1,5 @@
+I chose to use the Chirpy theme, it works well for what I am looking for and keeps me organized. Would reccomend. 
+
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
@@ -26,7 +28,6 @@ To save you time, and also in case you lose some files while copying, we extract
 latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
 
 ## Usage
-
 Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
 ## Contributing

@@ -1,0 +1,33 @@
+---
+title: More RAM, New Domain, and a DC
+date: 2025-08-12 12:00:00 
+categories: [homelab]
+tags: [homelab,proxmox,host]
+image:
+  path: assets/img/homelab/homelabv2.png
+---
+
+# The New Website
+After some thought, I decided to rebrand a little and purchase a [domain](https://landonslab.com). It is most likely what you're on now.
+
+# Host Upgrades
+The Proxmox host I built has been very serviceable up until a point. I very quickly became RAM limited. I found a pack of 2x16gb DDR4 laying around that is a great replacement for the 4x4gb set I had in before. I also ended up finding 500gb disk drives to hopefully give some space for additional drives to be added to the VMs or to host a large VM by itself. It being a HDD can cause some speed issues versus an SSD if there is too much trying to read/write at once.
+
+# The Domain Controller
+I finally downloaded a Windows Server 2022 ISO and created 2 VMs from it: a DC with Windows Core and another "toolbox/general purpose" server to test scripts not on my local machine. This development will allow faster times for account proliferation on both Linux and Windows VMs. I have already begun domain joining my VMs and turning off ones I don't use. 
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

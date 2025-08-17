@@ -4,7 +4,7 @@ date: 2025-08-12 12:00:00
 categories: [homelab]
 tags: [homelab,proxmox,host]
 image:
-  path: assets/img/homelab/homelabv2.png
+  #path: assets/img/homelab/homelabv2.png
 ---
 
 # The New Website

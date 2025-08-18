@@ -1,11 +1,11 @@
----
-title: More RAM, New Domain, and a DC
-date: 2025-08-12 12:00:00 
-categories: [homelab]
-tags: [homelab,proxmox,host]
-image:
+#---
+#title: More RAM, New Domain, and a DC
+#date: 2025-08-12 12:00:00 
+#categories: [homelab]
+#tags: [homelab,proxmox,host]
+#image:
   #path: assets/img/homelab/homelabv2.png
----
+#---
 
 # The New Website
 After some thought, I decided to rebrand a little and purchase a [domain](https://landonslab.com). It is most likely what you're on now.

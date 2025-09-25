@@ -1,20 +1,27 @@
 #---
-#title: More RAM, New Domain, and a DC
+#title: The Who, The What, and The Why: More RAM, New Domain, and a DC
 #date: 2025-08-12 12:00:00 
-#categories: [homelab]
-#tags: [homelab,proxmox,host]
+#categories: [website,administration]
+#tags: [website,administration]
 #image:
-  #path: assets/img/homelab/homelabv2.png
+  #path: make a photo explainaing the networking setup
 #---
 
 # The New Website
-After some thought, I decided to rebrand a little and purchase a [domain](https://landonslab.com). It is most likely what you're on now.
+After some thought, I decided to rebrand a little and purchase a [domain](https://landonslab.com). It is most likely what you're on now. This is going
+to allow for this site to seem a bit more professional, allow for me to gain exposure to domain management, and public facing DNS with the website.
 
 # Host Upgrades
-The Proxmox host I built has been very serviceable up until a point. I very quickly became RAM limited. I found a pack of 2x16gb DDR4 laying around that is a great replacement for the 4x4gb set I had in before. I also ended up finding 500gb disk drives to hopefully give some space for additional drives to be added to the VMs or to host a large VM by itself. It being a HDD can cause some speed issues versus an SSD if there is too much trying to read/write at once.
+The Proxmox host I built has been very serviceable up until a point. While you can over provision CPU, you cannot do so with RAM and, to a certain extent, storage.
+ I very quickly became RAM and storage limited. In order to avoid drops in uptime, I upgraded the RAM to 32GB and added 2x500gb HDDs for bulk storage/storing
+  VMs that are not needing heavy read/write.
 
 # The Domain Controller
-I finally downloaded a Windows Server 2022 ISO and created 2 VMs from it: a DC with Windows Core and another "toolbox/general purpose" server to test scripts not on my local machine. This development will allow faster times for account proliferation on both Linux and Windows VMs. I have already begun domain joining my VMs and turning off ones I don't use. 
+In order to be able to test the most common enterprise OS, Windows, I have created a Windows Server 2022 Domain Controller to allow ID management at scale. 
+I have even joined my Linux based VMs with Realm. In order to achieve this, I had to adjust the DNS server my Linux VMs were point to to become the DC I 
+built on a dedicated IP outside of the DHCP range of my other VMs. Using the new tools available, I was able to create 2 accounts, one Daily Driver, and one Admin account. This will help simulate the processes used by both sides 
+of administration.
+#new networking setup photo
 
 <script src="https://giscus.app/client.js"
         data-repo="hamsammich00/hamsammich00.github.io"

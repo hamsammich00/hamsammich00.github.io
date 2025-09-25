@@ -1,6 +1,6 @@
 ---
 title: The Domain and Homepage
-date: 2025-0-25 12:00:00 
+date: 2025-09-25 12:00:00 
 categories: [Infrastructure]
 tags: [Windows, Docker]
 ---

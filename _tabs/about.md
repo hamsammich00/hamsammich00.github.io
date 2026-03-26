@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Just a newish sysadmin trying to understand the billion things thrown at me day to day. I really like playing around with PowerShell more than anything for updating or deploying things. Mostly experienced with Windows based servers but slowly learning some Linux when I can.   
+A newish Sys Admin working my way through different things on my own servers. I like scripting in PowerShell mainly. I am mostly experience in Windows and only some Linux. The main purpose of this site is to be able to document little things I try and learn from when I wouldn't have a chance otherwise. I plan to post scripts in [my Demo-Scripts repo](https://github.com/hamsammich00/Demo-Scripts-Repo) to have documentation of what I do and maybe help others. I hope to be mostly serious but still come across in a positive way. My LinkedIn, email, and GitHub are accessible via the buttons under the "ABOUT" tab so feel free to reach out. 

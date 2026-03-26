@@ -1,0 +1,40 @@
+#---
+#title: The Who, The What, and The Why: More RAM, New Domain, and a DC
+#date: 2025-08-12 12:00:00 
+#categories: [website,administration]
+#tags: [website,administration]
+#image:
+  #path: make a photo explainaing the networking setup
+#---
+
+# The New Website
+After some thought, I decided to rebrand a little and purchase a [domain](https://landonslab.com). It is most likely what you're on now. This is going
+to allow for this site to seem a bit more professional, allow for me to gain exposure to domain management, and public facing DNS with the website.
+
+# Host Upgrades
+The Proxmox host I built has been very serviceable up until a point. While you can over provision CPU, you cannot do so with RAM and, to a certain extent, storage.
+ I very quickly became RAM and storage limited. In order to avoid drops in uptime, I upgraded the RAM to 32GB and added 2x500gb HDDs for bulk storage/storing
+  VMs that are not needing heavy read/write.
+
+# The Domain Controller
+In order to be able to test the most common enterprise OS, Windows, I have created a Windows Server 2022 Domain Controller to allow ID management at scale. 
+I have even joined my Linux based VMs with Realm. In order to achieve this, I had to adjust the DNS server my Linux VMs were point to to become the DC I 
+built on a dedicated IP outside of the DHCP range of my other VMs. Using the new tools available, I was able to create 2 accounts, one Daily Driver, and one Admin account. This will help simulate the processes used by both sides 
+of administration.
+#new networking setup photo
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

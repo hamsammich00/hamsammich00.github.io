@@ -2,15 +2,15 @@
 title: Please, update your stuff
 date: 2025-05-07 12:00:00 
 categories: [windows,powershell]
-tags: [windows,updates,powershell]
+tags: [windows,powershell]
 ---
 
 # Windows Updates
-Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber (not even sure if that's the correct term) can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
+Getting Windows to stay up to date in any org can be a monumental task and for some a full time job. I've learned a few tricks myself that any admin or home labber can implement into their own devices. Your new best friend is the PSWindowsUpdate module. Run the following in PowerShell to get it for yourself. 
 ```powershell
 Install-Module PSWindowsUpdate
 ```
-Thats just gonna get you the module. This next bit is the fun part. Run the following to get Windows updates:
+That's just gonna get you the module. This next bit is the fun part. Run the following to get Windows updates:
 ```powershell
 Get-WindowsUpdate -install
 #if you add the -AcceptAll flag it does exactly what it says, 
@@ -31,4 +31,20 @@ if (-not (Get-Module -ListAvailable -Name $ModuleName)) {
 #The actual updates
 Get-WindowsUpdate -MicrosoftUpdate -Install -AcceptAll
 ```
-So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. 
+So that was a rough crash course on how I like to update Windows based machines. Remember, test before using widely in order to avoid issues. More scripts can be found at https://github.com/hamsammich00/Demo-Scripts. 
+
+<script src="https://giscus.app/client.js"
+        data-repo="hamsammich00/hamsammich00.github.io"
+        data-repo-id="R_kgDOOllQ8w"
+        data-category="General"
+        data-category-id="DIC_kwDOOllQ884CrWhh"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

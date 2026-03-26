@@ -1,0 +1,286 @@
+
+/* ── Hero wrapper ───────────────────────────────────────── */
+#homelab-hero {
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  min-height: 480px;
+  max-height: 720px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sits outside Chirpy's .container, so pull into full width */
+  margin-left: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+/* ── Particle canvas ────────────────────────────────────── */
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d1117;
+}
+
+/* Subtle vignette so edges fade to the page bg */
+#homelab-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(13,17,23,0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Terminal card ──────────────────────────────────────── */
+#hero-terminal {
+  position: relative;
+  z-index: 2;
+  width: min(600px, 90vw);
+  background: rgba(13, 17, 23, 0.72);
+  border: 1px solid rgba(48, 54, 61, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+/* Title bar with traffic-light dots */
+.hero-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(22, 27, 34, 0.9);
+  border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+}
+
+.hero-titlebar .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.hero-titlebar-label {
+  margin-left: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #484f58;
+  letter-spacing: 0.06em;
+}
+
+/* Terminal body */
+.hero-body {
+  padding: 28px 32px 32px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Prompt line */
+.hero-prompt {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.hero-prompt-path {
+  color: #58a6ff;
+  font-size: 14px;
+  user-select: none;
+}
+
+.hero-prompt-symbol {
+  color: #7ee787;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Name */
+#hero-name {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  color: #e6edf3;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+/* Typewriter line */
+.hero-typewriter-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-height: 24px;
+  margin-bottom: 24px;
+}
+
+.hero-tw-prefix {
+  color: #8b949e;
+  font-size: 13px;
+}
+
+#hero-typewriter {
+  color: #7ee787;
+  font-size: 13px;
+}
+
+#hero-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: #7ee787;
+  margin-left: 1px;
+  vertical-align: middle;
+  animation: hero-blink 0.75s step-end infinite;
+}
+
+@keyframes hero-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Tag pills */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.hero-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #8b949e;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid #30363d;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.hero-tag.accent {
+  color: #58a6ff;
+  border-color: rgba(56, 139, 253, 0.4);
+  background: rgba(56, 139, 253, 0.08);
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.hero-btn:hover { transform: translateY(-1px); text-decoration: none; }
+.hero-btn:active { transform: translateY(0); }
+
+.hero-btn-primary {
+  background: #238636;
+  color: #ffffff;
+  border: 1px solid #2ea043;
+}
+.hero-btn-primary:hover {
+  background: #2ea043;
+  color: #ffffff;
+}
+
+.hero-btn-secondary {
+  background: transparent;
+  color: #8b949e;
+  border: 1px solid #30363d;
+}
+.hero-btn-secondary:hover {
+  color: #e6edf3;
+  border-color: #8b949e;
+}
+
+/* ── Scroll indicator ───────────────────────────────────── */
+#hero-scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #484f58;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: hero-fade-in 1s ease 1.5s both;
+}
+
+.hero-scroll-chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid #484f58;
+  border-bottom: 1.5px solid #484f58;
+  transform: rotate(45deg);
+  animation: hero-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes hero-bounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50%       { transform: rotate(45deg) translateY(3px); }
+}
+
+/* ── Scroll-reveal for post cards ──────────────────────────
+   Chirpy renders post cards with class .card — we animate
+   them as they enter the viewport via IntersectionObserver.
+   ─────────────────────────────────────────────────────── */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.hero-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside a reveal group */
+.hero-reveal:nth-child(2) { transition-delay: 0.08s; }
+.hero-reveal:nth-child(3) { transition-delay: 0.16s; }
+.hero-reveal:nth-child(4) { transition-delay: 0.24s; }
+.hero-reveal:nth-child(5) { transition-delay: 0.32s; }
+
+/* ── Fade-in utility ────────────────────────────────────── */
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-animate-in {
+  animation: hero-fade-in 0.6s ease both;
+}
+
+.hero-animate-in:nth-child(1) { animation-delay: 0.1s; }
+.hero-animate-in:nth-child(2) { animation-delay: 0.25s; }
+.hero-animate-in:nth-child(3) { animation-delay: 0.4s; }
+.hero-animate-in:nth-child(4) { animation-delay: 0.55s; }
+
+/* ── Light mode override ────────────────────────────────── */
+/* Chirpy adds [data-mode="light"] on <html>               */
+[data-mode="light"] #hero-canvas {
+  background: #111827;
+}

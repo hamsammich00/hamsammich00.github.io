@@ -1,0 +1,76 @@
+
+---
+---
+
+/* Load the original Chirpy stylesheet */
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Landon's Lab - Blue Accent Theme */
+
+@mixin lab-light {
+  --link-color: #1d4ed8;
+  --toc-highlight: #2563eb;
+  --site-title-color: #2563eb;
+  --sidebar-active-color: #2563eb;
+  --sidebar-hover-bg: #dbeafe;
+}
+
+@mixin lab-dark {
+  --link-color: #7dd3fc;
+  --toc-highlight: #7dd3fc;
+  --site-title-color: #7dd3fc;
+  --sidebar-active-color: #7dd3fc;
+  --sidebar-hover-bg: #163247;
+}
+
+/* Explicitly selected light/dark mode */
+
+html[data-mode='light'] {
+  @include lab-light;
+}
+
+html[data-mode='dark'] {
+  @include lab-dark;
+}
+
+/* Follow operating system preference */
+
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]) {
+    @include lab-light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) {
+    @include lab-dark;
+  }
+}
+
+/* Accent borders on article headings */
+
+.content h2,
+.content h3 {
+  border-left: 3px solid var(--link-color);
+  padding-left: 0.75rem;
+}
+
+/* Accent border around the profile avatar */
+
+#sidebar #avatar {
+  box-shadow: var(--link-color) 0 0 0 2px;
+}
+
+/* Subtle highlight on hovered post cards */
+
+.post-preview:hover {
+  box-shadow:
+    0 0 0 1px var(--link-color),
+    var(--card-shadow);
+}

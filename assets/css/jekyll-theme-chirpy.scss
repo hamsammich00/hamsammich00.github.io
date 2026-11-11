@@ -1,8 +1,9 @@
 ---
 ---
 
-/* Load Chirpy's original stylesheet. Jekyll front matter must start at byte 1. */
+/* Landon's Lab -- Chirpy 7.6.x custom styles */
 
+/* Keep the Chirpy stylesheet import intact. */
 /* prettier-ignore */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
@@ -10,77 +11,76 @@
 {%- endif -%}
 ';
 
-/* Landon's Lab: flat, blue-gray sidebars and accessible blue/cyan accents. */
-
+/* WHITE / BLUE: light mode only */
 @mixin lab-light {
+  --link-color: #1d4ed8;
+  --toc-highlight: #2563eb;
+  --site-title-color: #2563eb;
+  --site-subtitle-color: #526579;
 
-/* Light mode: white + blue */
---link-color: #1d4ed8;
---toc-highlight: #2563eb;
---site-title-color: #2563eb;
---site-subtitle-color: #526579;
+  --sidebar-bg: #f7faff;
+  --sidebar-border-color: #d5e1ef;
+  --sidebar-muted-color: #526579;
+  --sidebar-active-color: #1d4ed8;
+  --sidebar-hover-bg: #e2edff;
+  --sidebar-btn-bg: #ffffff;
+  --sidebar-btn-color: #2563eb;
 
---sidebar-bg: #f7faff;
---sidebar-border-color: #d5e1ef;
---sidebar-muted-color: #526579;
---sidebar-active-color: #1d4ed8;
---sidebar-hover-bg: #e2edff;
---sidebar-btn-bg: #ffffff;
---sidebar-btn-color: #2563eb;
+  --lab-panel-bg: #f7faff;
+  --lab-panel-border: #d5e1ef;
+  --menu-bg: #ffffff;
+  --menu-border-color: #d5e1ef;
+  --menu-active-color: #1d4ed8;
+  --menu-highlight-bg: #e2edff;
 
---lab-panel-bg: #f7faff;
---lab-panel-border: #d5e1ef;
-
---lab-new-bg: #2563eb;
---lab-new-text: #ffffff;
-
+  --lab-new-bg: #2563eb;
+  --lab-new-text: #ffffff;
 }
 
+/* CHARCOAL GRAY / MATRIX GREEN: dark mode only */
 @mixin lab-dark {
+  --link-color: #9bff70;
+  --toc-highlight: #39ff14;
+  --site-title-color: #39ff14;
+  --site-subtitle-color: #c5cbd0;
 
-/* Dark mode: charcoal gray + neon green */
---link-color: #9bff70;
---toc-highlight: #39ff14;
---site-title-color: #39ff14;
---site-subtitle-color: #c5cbd0;
+  --sidebar-bg: #292d30;
+  --sidebar-border-color: #454d49;
+  --sidebar-muted-color: #c5cbd0;
+  --sidebar-active-color: #39ff14;
+  --sidebar-hover-bg: #3a4043;
+  --sidebar-btn-bg: #343a3d;
+  --sidebar-btn-color: #9bff70;
 
---sidebar-bg: #292d30;
---sidebar-border-color: #454d49;
---sidebar-muted-color: #c5cbd0;
---sidebar-active-color: #39ff14;
---sidebar-hover-bg: #3a4043;
---sidebar-btn-bg: #343a3d;
---sidebar-btn-color: #9bff70;
+  --lab-panel-bg: #292d30;
+  --lab-panel-border: #454d49;
+  --menu-bg: #292d30;
+  --menu-border-color: #454d49;
+  --menu-active-color: #39ff14;
+  --menu-highlight-bg: #3a4043;
 
---lab-panel-bg: #292d30;
---lab-panel-border: #454d49;
-
---lab-new-bg: #39ff14;
---lab-new-text: #102014;
-
+  --lab-new-bg: #39ff14;
+  --lab-new-text: #102014;
 }
 
-
-/* Mirror Chirpy's system-preferring light/dark selection. */
-html[data-mode='light'] { @include lab-light; }
-html[data-mode='dark'] { @include lab-dark; }
-
-@media (prefers-color-scheme: light) {
-  html:not([data-mode]) { @include lab-light; }
-}
-@media (prefers-color-scheme: dark) {
-  html:not([data-mode]) { @include lab-dark; }
+/* Chirpy 7.6.x uses data-bs-theme, NOT data-mode.
+   It sets data-bs-theme even when following the operating system. */
+:root[data-bs-theme='light'] {
+  @include lab-light;
 }
 
-/* Both sidebars are solid blue-gray, not gradients. */
+:root[data-bs-theme='dark'] {
+  @include lab-dark;
+}
+
+/* Flat, mode-specific sidebar and right panel colors. */
 #sidebar {
-  background: var(--lab-panel-bg);
+  background: var(--sidebar-bg);
 }
 
 @media (min-width: 1200px) {
   #panel-wrapper {
-    background-color: var(--lab-panel-bg);
-    background-image: none;
+    background: var(--lab-panel-bg);
     border: 1px solid var(--lab-panel-border);
     border-radius: 10px;
     padding-top: 0.75rem;
@@ -88,103 +88,90 @@ html[data-mode='dark'] { @include lab-dark; }
   }
 }
 
-/* Existing highlights. */
+/* Article accents. */
 .content h2,
 .content h3 {
   border-left: 3px solid var(--link-color);
   padding-left: 0.75rem;
 }
+
 #sidebar #avatar {
   box-shadow: var(--link-color) 0 0 0 2px;
 }
 
-/* Subtle lift for cards; also visible to keyboard users. */
+/* Subtle upward movement on homepage post cards. */
 #post-list .post-preview {
   position: relative;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
+
 #post-list .post-preview:hover,
 #post-list .post-preview:focus-visible {
   transform: translateY(-5px);
-  box-shadow: 0 5px 18px rgb(0 0 0 / 13%), 0 0 0 1px var(--link-color);
+  box-shadow: 0 5px 18px rgb(0 0 0 / 13%),
+              0 0 0 1px var(--link-color);
 }
 
-/* The newest post gets a small tilted tab outside its upper-right corner.
-   Keeping it mostly above the card avoids covering the title or preview image. */
-
+/* Small, tilted NEW badge. The width/flex rules defeat Bootstrap's .row > *. */
 #post-list .post-preview .new-post-badge {
   position: absolute;
   z-index: 2;
-
-  /* Position in the top-right corner */
   top: -0.45rem;
   right: 0.3rem;
-
-  /* Override Bootstrap's full-width row children */
   display: inline-block;
   width: max-content;
   max-width: none;
   flex: 0 0 auto;
-
-  /* Tilt */
   transform: rotate(13deg);
   transform-origin: center;
-
-  /* Appearance */
   background: var(--lab-new-bg);
   color: var(--lab-new-text);
   border: 1px solid var(--card-bg);
   border-radius: 0.2rem;
-
-  /* Text and sizing */
   font-size: 0.6rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
   white-space: nowrap;
   padding: 0.2rem 0.35rem;
-
-  /* Shadow */
   box-shadow: 0 2px 5px rgb(0 0 0 / 16%);
   pointer-events: none;
 }
 
-/* Avoid horizontal overhang on narrow screens. */
 @media (max-width: 575px) {
   #post-list .post-preview .new-post-badge {
     right: 0.1rem;
   }
 }
 
-/* Override Chirpy's original mode toggle icon */
-
-#mode-toggle .fa-adjust::before {
-  content: '\f0eb' !important;
-  font-family: 'Font Awesome 6 Free' !important;
+/* Chirpy 7.6.x displays a different icon for each of the three
+   mode states (display, sun, moon). Show the same lightbulb for all.
+   The original theme dropdown and persistent preference are unchanged. */
+#mode-toggle > i[data-theme-mode]::before {
+  content: '\f0eb' !important; /* Font Awesome lightbulb */
+  font-family: 'Font Awesome 7 Free' !important;
   font-weight: 900 !important;
 }
 
-#mode-toggle .fa-adjust {
-  color: var(--link-color);
-  font-size: 1.15rem;
-}
-#mode-toggle .fa-adjust {
-  color: var(--link-color);
+#mode-toggle > i[data-theme-mode] {
+  color: var(--sidebar-btn-color);
   font-size: 1.15rem;
   transition: transform 180ms ease;
 }
-#mode-toggle:hover .fa-adjust {
+
+#mode-toggle:hover > i[data-theme-mode] {
   transform: scale(1.12);
 }
 
 @media (prefers-reduced-motion: reduce) {
   #post-list .post-preview,
-  #mode-toggle .fa-adjust {
+  #mode-toggle > i[data-theme-mode] {
     transition: none;
   }
+
   #post-list .post-preview:hover,
   #post-list .post-preview:focus-visible,
-  #mode-toggle:hover .fa-adjust {
+  #mode-toggle:hover > i[data-theme-mode] {
     transform: none;
   }
 }

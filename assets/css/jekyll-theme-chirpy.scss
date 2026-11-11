@@ -156,9 +156,17 @@ html[data-mode='dark'] { @include lab-dark; }
   }
 }
 
-/* Replace Chirpy's original half-moon icon with a lightbulb (Font Awesome). */
+/* Override Chirpy's original mode toggle icon */
+
 #mode-toggle .fa-adjust::before {
   content: '\f0eb' !important;
+  font-family: 'Font Awesome 6 Free' !important;
+  font-weight: 900 !important;
+}
+
+#mode-toggle .fa-adjust {
+  color: var(--link-color);
+  font-size: 1.15rem;
 }
 #mode-toggle .fa-adjust {
   color: var(--link-color);

@@ -1,7 +1,7 @@
 ---
 ---
 
-/* Load the original Chirpy stylesheet */
+/* Load Chirpy's original stylesheet. Jekyll front matter must start at byte 1. */
 
 /* prettier-ignore */
 @use 'main
@@ -10,66 +10,135 @@
 {%- endif -%}
 ';
 
-/* Landon's Lab - Blue Accent Theme */
+/* Landon's Lab: flat, blue-gray sidebars and accessible blue/cyan accents. */
 
 @mixin lab-light {
   --link-color: #1d4ed8;
   --toc-highlight: #2563eb;
-  --site-title-color: #2563eb;
-  --sidebar-active-color: #2563eb;
-  --sidebar-hover-bg: #dbeafe;
+  --site-title-color: #285c82;
+  --site-subtitle-color: #526979;
+  --sidebar-bg: #e0e8ee;
+  --sidebar-border-color: #c4d3de;
+  --sidebar-muted-color: #526979;
+  --sidebar-active-color: #225578;
+  --sidebar-hover-bg: #cbdce7;
+  --sidebar-btn-bg: #eef3f7;
+  --sidebar-btn-color: #315c7d;
+  --lab-panel-bg: #e0e8ee;
+  --lab-panel-border: #c4d3de;
+  --lab-new-bg: #2563eb;
+  --lab-new-text: #fff;
 }
 
 @mixin lab-dark {
   --link-color: #7dd3fc;
   --toc-highlight: #7dd3fc;
-  --site-title-color: #7dd3fc;
-  --sidebar-active-color: #7dd3fc;
-  --sidebar-hover-bg: #163247;
+  --site-title-color: #a3d8f0;
+  --site-subtitle-color: #c0ced9;
+  --sidebar-bg: #293948;
+  --sidebar-border-color: #3b5061;
+  --sidebar-muted-color: #bdcfdb;
+  --sidebar-active-color: #e5f5ff;
+  --sidebar-hover-bg: #395165;
+  --sidebar-btn-bg: #354a5c;
+  --sidebar-btn-color: #c1d7e5;
+  --lab-panel-bg: #293948;
+  --lab-panel-border: #3b5061;
+  --lab-new-bg: #7dd3fc;
+  --lab-new-text: #152b3d;
 }
 
-/* Explicitly selected light/dark mode */
-
-html[data-mode='light'] {
-  @include lab-light;
-}
-
-html[data-mode='dark'] {
-  @include lab-dark;
-}
-
-/* Follow operating system preference */
+/* Mirror Chirpy's system-preferring light/dark selection. */
+html[data-mode='light'] { @include lab-light; }
+html[data-mode='dark'] { @include lab-dark; }
 
 @media (prefers-color-scheme: light) {
-  html:not([data-mode]) {
-    @include lab-light;
-  }
+  html:not([data-mode]) { @include lab-light; }
 }
-
 @media (prefers-color-scheme: dark) {
-  html:not([data-mode]) {
-    @include lab-dark;
+  html:not([data-mode]) { @include lab-dark; }
+}
+
+/* Both sidebars are solid blue-gray, not gradients. */
+#sidebar {
+  background-color: var(--sidebar-bg);
+  background-image: none;
+}
+
+@media (min-width: 1200px) {
+  #panel-wrapper {
+    background-color: var(--lab-panel-bg);
+    background-image: none;
+    border: 1px solid var(--lab-panel-border);
+    border-radius: 10px;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
   }
 }
 
-/* Accent borders on article headings */
-
+/* Existing highlights. */
 .content h2,
 .content h3 {
   border-left: 3px solid var(--link-color);
   padding-left: 0.75rem;
 }
-
-/* Accent border around the profile avatar */
-
 #sidebar #avatar {
   box-shadow: var(--link-color) 0 0 0 2px;
 }
 
-/* Subtle highlight on hovered post cards */
+/* Subtle lift for cards; also visible to keyboard users. */
+#post-list .post-preview {
+  position: relative;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+#post-list .post-preview:hover,
+#post-list .post-preview:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 18px rgb(0 0 0 / 13%), 0 0 0 1px var(--link-color);
+}
 
-.post-preview:hover {
-  box-shadow:
-    0 0 0 1px var(--link-color),
-    var(--card-shadow);
+/* Applied only to the actual newest post by metadata-hook.html. */
+#post-list .post-preview.is-latest-post .card-title {
+  padding-right: 4.25rem;
+}
+#post-list .post-preview .new-post-badge {
+  position: absolute;
+  z-index: 2;
+  top: 0.85rem;
+  right: 0.85rem;
+  border-radius: 0.35rem;
+  background: var(--lab-new-bg);
+  color: var(--lab-new-text);
+  font-size: 0.67rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  padding: 0.45rem 0.55rem;
+  box-shadow: 0 2px 7px rgb(0 0 0 / 16%);
+  pointer-events: none;
+}
+
+/* Replace Chirpy's original half-moon icon with a lightbulb (Font Awesome). */
+#mode-toggle .fa-adjust::before {
+  content: '\f0eb' !important;
+}
+#mode-toggle .fa-adjust {
+  color: var(--link-color);
+  font-size: 1.15rem;
+  transition: transform 180ms ease;
+}
+#mode-toggle:hover .fa-adjust {
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #post-list .post-preview,
+  #mode-toggle .fa-adjust {
+    transition: none;
+  }
+  #post-list .post-preview:hover,
+  #post-list .post-preview:focus-visible,
+  #mode-toggle:hover .fa-adjust {
+    transform: none;
+  }
 }

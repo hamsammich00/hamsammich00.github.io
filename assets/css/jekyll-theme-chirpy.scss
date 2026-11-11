@@ -31,22 +31,34 @@
 }
 
 @mixin lab-dark {
-  --link-color: #7dd3fc;
-  --toc-highlight: #7dd3fc;
-  --site-title-color: #a3d8f0;
-  --site-subtitle-color: #c0ced9;
-  --sidebar-bg: #293948;
-  --sidebar-border-color: #3b5061;
-  --sidebar-muted-color: #bdcfdb;
-  --sidebar-active-color: #e5f5ff;
-  --sidebar-hover-bg: #395165;
-  --sidebar-btn-bg: #354a5c;
-  --sidebar-btn-color: #c1d7e5;
-  --lab-panel-bg: #293948;
-  --lab-panel-border: #3b5061;
-  --lab-new-bg: #7dd3fc;
-  --lab-new-text: #152b3d;
+  /* Neon green accents */
+  --link-color: #9bff70;
+  --toc-highlight: #39ff14;
+
+  /* Site title and subtitle */
+  --site-title-color: #39ff14;
+  --site-subtitle-color: #b4d5b0;
+
+  /* Left sidebar */
+  --sidebar-bg: #24352a;
+  --sidebar-border-color: #3b5943;
+  --sidebar-muted-color: #b0cbb3;
+  --sidebar-active-color: #39ff14;
+  --sidebar-hover-bg: #324d38;
+
+  /* Sidebar buttons */
+  --sidebar-btn-bg: #304436;
+  --sidebar-btn-color: #9bff70;
+
+  /* Right panel */
+  --lab-panel-bg: #24352a;
+  --lab-panel-border: #3b5943;
+
+  /* NEW post badge */
+  --lab-new-bg: #39ff14;
+  --lab-new-text: #102014;
 }
+
 
 /* Mirror Chirpy's system-preferring light/dark selection. */
 html[data-mode='light'] { @include lab-light; }

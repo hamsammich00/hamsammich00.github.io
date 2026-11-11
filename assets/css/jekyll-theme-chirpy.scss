@@ -175,3 +175,22 @@
     transform: none;
   }
 }
+
+
+/* Trending Tags - Match active theme */
+
+#panel-wrapper .post-tag.btn-outline-primary {
+  /* Normal appearance */
+  --bs-btn-color: var(--sidebar-muted-color);
+  --bs-btn-border-color: var(--lab-panel-border);
+
+  /* Hover appearance */
+  --bs-btn-hover-color: var(--link-color);
+  --bs-btn-hover-bg: var(--sidebar-hover-bg);
+  --bs-btn-hover-border-color: var(--link-color);
+
+  /* Clicked appearance */
+  --bs-btn-active-color: var(--link-color);
+  --bs-btn-active-bg: var(--sidebar-hover-bg);
+  --bs-btn-active-border-color: var(--link-color);
+}

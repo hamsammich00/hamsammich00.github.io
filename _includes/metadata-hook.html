@@ -1,0 +1,20 @@
+<!-- Mark only the newest post on the homepage. Keep Chirpy's built-in theme toggle unchanged. -->
+{% if page.layout == 'home' %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const latestUrl = {{ site.posts.first.url | relative_url | jsonify }};
+  const cards = document.querySelectorAll('#post-list a.post-preview');
+
+  for (const card of cards) {
+    if (card.getAttribute('href') !== latestUrl) continue;
+    card.classList.add('is-latest-post');
+
+    const badge = document.createElement('span');
+    badge.className = 'new-post-badge';
+    badge.textContent = 'NEW';
+    card.appendChild(badge);
+    break;
+  }
+});
+</script>
+{% endif %}

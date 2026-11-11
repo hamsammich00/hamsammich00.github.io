@@ -99,27 +99,41 @@ html[data-mode='dark'] { @include lab-dark; }
 
 /* The newest post gets a small tilted tab outside its upper-right corner.
    Keeping it mostly above the card avoids covering the title or preview image. */
-#post-list .post-preview.is-latest-post {
-  overflow: visible;
-}
+
 #post-list .post-preview .new-post-badge {
   position: absolute;
   z-index: 2;
-  top: -0.8rem;
-  right: -0.35rem;
+
+  /* Position in the top-right corner */
+  top: -0.45rem;
+  right: 0.3rem;
+
+  /* Override Bootstrap's full-width row children */
+  display: inline-block;
+  width: max-content;
+  max-width: none;
+  flex: 0 0 auto;
+
+  /* Tilt */
   transform: rotate(13deg);
   transform-origin: center;
-  border: 1px solid var(--card-bg);
-  border-radius: 0.25rem;
+
+  /* Appearance */
   background: var(--lab-new-bg);
   color: var(--lab-new-text);
-  font-size: 0.67rem;
+  border: 1px solid var(--card-bg);
+  border-radius: 0.2rem;
+
+  /* Text and sizing */
+  font-size: 0.6rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.03em;
   white-space: nowrap;
-  padding: 0.4rem 0.6rem;
-  box-shadow: 0 2px 7px rgb(0 0 0 / 16%);
+  padding: 0.2rem 0.35rem;
+
+  /* Shadow */
+  box-shadow: 0 2px 5px rgb(0 0 0 / 16%);
   pointer-events: none;
 }
 

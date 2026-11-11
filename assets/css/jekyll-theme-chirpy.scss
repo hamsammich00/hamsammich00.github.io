@@ -194,3 +194,10 @@
   --bs-btn-active-bg: var(--sidebar-hover-bg);
   --bs-btn-active-border-color: var(--link-color);
 }
+
+/* Fix blue outline on Trending Tags */
+
+#panel-wrapper .post-tag.btn-outline-primary:not(.disabled):hover,
+#panel-wrapper .post-tag.btn-outline-primary:focus-visible {
+  border-color: var(--link-color) !important;
+}

@@ -13,50 +13,51 @@
 /* Landon's Lab: flat, blue-gray sidebars and accessible blue/cyan accents. */
 
 @mixin lab-light {
-  --link-color: #1d4ed8;
-  --toc-highlight: #2563eb;
-  --site-title-color: #285c82;
-  --site-subtitle-color: #526979;
-  --sidebar-bg: #e0e8ee;
-  --sidebar-border-color: #c4d3de;
-  --sidebar-muted-color: #526979;
-  --sidebar-active-color: #225578;
-  --sidebar-hover-bg: #cbdce7;
-  --sidebar-btn-bg: #eef3f7;
-  --sidebar-btn-color: #315c7d;
-  --lab-panel-bg: #e0e8ee;
-  --lab-panel-border: #c4d3de;
-  --lab-new-bg: #2563eb;
-  --lab-new-text: #fff;
+
+/* Light mode: white + blue */
+--link-color: #1d4ed8;
+--toc-highlight: #2563eb;
+--site-title-color: #2563eb;
+--site-subtitle-color: #526579;
+
+--sidebar-bg: #f7faff;
+--sidebar-border-color: #d5e1ef;
+--sidebar-muted-color: #526579;
+--sidebar-active-color: #1d4ed8;
+--sidebar-hover-bg: #e2edff;
+--sidebar-btn-bg: #ffffff;
+--sidebar-btn-color: #2563eb;
+
+--lab-panel-bg: #f7faff;
+--lab-panel-border: #d5e1ef;
+
+--lab-new-bg: #2563eb;
+--lab-new-text: #ffffff;
+
 }
 
 @mixin lab-dark {
-  /* Neon green accents */
-  --link-color: #9bff70;
-  --toc-highlight: #39ff14;
 
-  /* Site title and subtitle */
-  --site-title-color: #39ff14;
-  --site-subtitle-color: #b4d5b0;
+/* Dark mode: charcoal gray + neon green */
+--link-color: #9bff70;
+--toc-highlight: #39ff14;
+--site-title-color: #39ff14;
+--site-subtitle-color: #c5cbd0;
 
-  /* Left sidebar */
-  --sidebar-bg: #24352a;
-  --sidebar-border-color: #3b5943;
-  --sidebar-muted-color: #b0cbb3;
-  --sidebar-active-color: #39ff14;
-  --sidebar-hover-bg: #324d38;
+--sidebar-bg: #292d30;
+--sidebar-border-color: #454d49;
+--sidebar-muted-color: #c5cbd0;
+--sidebar-active-color: #39ff14;
+--sidebar-hover-bg: #3a4043;
+--sidebar-btn-bg: #343a3d;
+--sidebar-btn-color: #9bff70;
 
-  /* Sidebar buttons */
-  --sidebar-btn-bg: #304436;
-  --sidebar-btn-color: #9bff70;
+--lab-panel-bg: #292d30;
+--lab-panel-border: #454d49;
 
-  /* Right panel */
-  --lab-panel-bg: #24352a;
-  --lab-panel-border: #3b5943;
+--lab-new-bg: #39ff14;
+--lab-new-text: #102014;
 
-  /* NEW post badge */
-  --lab-new-bg: #39ff14;
-  --lab-new-text: #102014;
 }
 
 
@@ -73,8 +74,7 @@ html[data-mode='dark'] { @include lab-dark; }
 
 /* Both sidebars are solid blue-gray, not gradients. */
 #sidebar {
-  background-color: var(--sidebar-bg);
-  background-image: none;
+  background: var(--lab-panel-bg);
 }
 
 @media (min-width: 1200px) {
@@ -178,31 +178,5 @@ html[data-mode='dark'] { @include lab-dark; }
   #post-list .post-preview:focus-visible,
   #mode-toggle:hover .fa-adjust {
     transform: none;
-  }
-}
-
-/* Force left sidebar colors */
-
-/* Dark mode */
-html[data-mode='dark'] #sidebar {
-  background: #293948 !important;
-}
-
-/* Light mode */
-html[data-mode='light'] #sidebar {
-  background: #e0e8ee !important;
-}
-
-/* Follow system dark mode */
-@media (prefers-color-scheme: dark) {
-  html:not([data-mode]) #sidebar {
-    background: #293948 !important;
-  }
-}
-
-/* Follow system light mode */
-@media (prefers-color-scheme: light) {
-  html:not([data-mode]) #sidebar {
-    background: #e0e8ee !important;
   }
 }

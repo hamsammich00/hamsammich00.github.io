@@ -46,7 +46,7 @@ Running a model across multiple GPUs is a bit more involved than just adding the
 
 My setup is a little more nonstandard because one card is AMD and the other is NVIDIA. They don't use the same native compute backend. While llama.cpp supports building CUDA and Vulkan backends together, whether a specific mixed-device configuration works well depends on the build, driver support, the model, and the selected devices. You have to verify what the runtime actually detects and offloads; installing a second card doesn't guarantee automatic cooperation.
 
-This was all hooked up to Hermes on my laptop with llama.cpp handling the actual model itself. Hermes gave it the tools to act as an agent how other agents like OpenClaw or Claude Code work. 
+This was all hooked up to Hermes on my desktop with llama.cpp handling the actual model itself. Hermes gave it the tools to act as an agent how other agents like OpenClaw or Claude Code work to make real tangible changes on my computer.  
 
 Relevant reading: [llama.cpp's multi-GPU guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/multi-gpu.md), [llama.cpp build instructions](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md), and [NVIDIA's CUDA architecture support matrix](https://docs.nvidia.com/datacenter/tesla/drivers/cuda-toolkit-driver-and-architecture-matrix.html).
 

@@ -168,3 +168,29 @@ html[data-mode='dark'] { @include lab-dark; }
     transform: none;
   }
 }
+
+/* Force left sidebar colors */
+
+/* Dark mode */
+html[data-mode='dark'] #sidebar {
+  background: #293948 !important;
+}
+
+/* Light mode */
+html[data-mode='light'] #sidebar {
+  background: #e0e8ee !important;
+}
+
+/* Follow system dark mode */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) #sidebar {
+    background: #293948 !important;
+  }
+}
+
+/* Follow system light mode */
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]) #sidebar {
+    background: #e0e8ee !important;
+  }
+}
